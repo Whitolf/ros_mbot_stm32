@@ -85,8 +85,6 @@ void USART1_IRQHandler()
  	 {
 		 USART_ClearITPendingBit(USART1,USART_IT_RXNE);//首先清除中断标志位
 		 usartReceiveOneData(USART1,&leftSpeedSet,&rightSpeedSet,&receCtrlFlag);
-		 leftSpeedSet*=0.4;
-		 rightSpeedSet*=0.4;
 		 
 	 }
 }
